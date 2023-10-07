@@ -1,0 +1,84 @@
+
+{% load bootstrap5 %}
+{% load static %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap_test/styles.css' %}">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+    <div class="container">
+        <div class="card mt-5 mb-3" style="max-width: 1540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{% static 'images/desktop.webp' %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h1 class="card-title-big">Bring code to Life:<br/>Topics from the world of software development</h1>
+                  <h3 class="card-title">Welcome to the world of software development</h3>
+                  <p class="card-text">This blog is about Python Django and Javascript.This blog cover's some of the most important topics to get started with Software Development, On 
+                    this blog, i cover topics mostly from Django and Javascript but includes other topics such as React.js and SQL
+                  </p>
+                  <p class="card-text"><small class="text-body-secondary">Read: 2 mins read</small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-3">
+        <h1 class="mb-3" style="text-align: center;">Frequently Asked Questions</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is Django Web Framework
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Django is a high-level Python web framework </strong> that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is React.js
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>React is a library for building user interfaces.</strong> React is not a framework – it's not even exclusive to the web. It's used with other libraries to render to certain environments. For instance, React Native can be used to build mobile applications.
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
